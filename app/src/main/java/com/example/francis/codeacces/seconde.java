@@ -1,9 +1,13 @@
 package com.example.francis.codeacces;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class seconde extends AppCompatActivity {
 
@@ -11,6 +15,18 @@ public class seconde extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seconde);
+        Intent intent = getIntent();
+        String nom = intent.getStringExtra("Nom");
+        String code = intent.getStringExtra("Code");
+        if(code.equals("1337"))
+        {
+            ((RelativeLayout)findViewById(R.id.bg)).setBackgroundColor(Color.GREEN);
+            ((TextView)findViewById(R.id.texte)).setText("Bienvenue "+nom);
+        }
+        else{
+            ((RelativeLayout)findViewById(R.id.bg)).setBackgroundColor(Color.RED);
+            ((TextView)findViewById(R.id.texte)).setText("Vous n'avez pas le bon code!!!!!");
+        }
     }
 
     @Override

@@ -1,10 +1,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/Root">
 
 
         <EditText
@@ -16,7 +18,7 @@
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="69dp"
-            android:id="@+id/editText"
+            android:id="@+id/Code"
             android:editable="true"
             android:focusable="false" />
 
@@ -24,7 +26,8 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="50">
+        android:layout_weight="50"
+        android:id="@+id/Clavier">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -120,21 +123,21 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:text="Effacer"
-                android:id="@+id/button10"
+                android:id="@+id/Effacer"
                 android:layout_weight="30" />
 
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:text="0"
-                android:id="@+id/button11"
+                android:id="@+id/Zero"
                 android:layout_weight="30" />
 
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:text="Entrer"
-                android:id="@+id/button12"
+                android:id="@+id/Entrer"
                 android:layout_weight="30" />
         </LinearLayout>
     </LinearLayout>
